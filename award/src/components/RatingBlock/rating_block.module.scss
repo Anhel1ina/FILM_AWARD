@@ -1,0 +1,21 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.rating_block{
+    background-color: $folly;
+    font-family: 'MenuFont';
+    color: $main-light;
+
+    padding: 5px 7px;
+}
+
+.big_rating{
+    background-color: $big-rating;
+}
+
+.medium_rating{
+    background-color: $medium-rating;
+}
+
+.small_rating{
+    background-color: $folly;
+}

@@ -1,0 +1,110 @@
+@import '../../helpers/theme_colors.module.scss';
+@import '../../helpers/templates.module.scss';
+
+@keyframes show{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 17%;
+    }
+}
+
+@keyframes showInnerBlock{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 85%;
+    }
+}
+
+@keyframes showText{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.go_back_button_wrapper{
+    position: absolute;
+    z-index: 4;
+    top: 23%;
+    left: 6%;
+
+    width: 17%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mainButtonsWrapper;
+    cursor: pointer;
+    animation: show .7s ease-in-out;
+}
+
+@media(max-width: 830px){
+    .go_back_button_wrapper{
+        width: 30%;
+    }
+}
+
+:global(.DARK) .go_back_button_wrapper {
+    &::before{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $main-light;
+        border-bottom: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &::after{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $main-light;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.go_back_button{
+    width: 85%;
+    height: 50px;
+    background-color: $jet;
+    color: $main-light;
+
+    font-family: 'Main';
+    font-size: calc(5px + 1vw);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: showInnerBlock .7s ease-in-out;
+
+    & > span{
+        opacity: 0;
+        animation: showText .4s ease-in-out .7s forwards;
+    }
+}
+
+:global(.DARK) .go_back_button{
+    background-color: $main-light;
+    color: $main-black;
+}
+
+.up_position{
+    top: 14%;
+}
+
+.sign_position{
+    top: 80%;
+}

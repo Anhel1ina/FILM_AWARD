@@ -1,0 +1,27 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.filter_button{
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    border: 2px solid $gradient-color;
+    border-radius: 17px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    &:hover{
+        background-color: $gradient-color;
+    }
+
+    & svg path{
+        fill: $main-light;
+    }
+}

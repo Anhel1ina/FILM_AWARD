@@ -1,0 +1,28 @@
+@import '../../helpers/templates.module.scss';
+@import '../../helpers/theme_colors.module.scss';
+
+.auth_icon{
+    @include menuItem;
+    height: 45px;
+    margin-left: 20px;
+    border-radius: 17px;
+    border: 2px solid $gradient-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    padding: 0 10px;
+    cursor: default;
+
+    & > div{
+        background-color: $gradient-color;
+        border-radius: 50%;
+        padding: 5px 8px;
+    }
+
+    & > p{
+        margin-left: 10px;
+    }
+}

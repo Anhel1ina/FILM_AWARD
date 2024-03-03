@@ -1,0 +1,15 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.add_info{
+    font-size: 18px;
+    box-sizing: border-box;
+    & p{
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 980px) {
+    .add_info{
+        font-size: 14px;
+    }
+}

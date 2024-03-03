@@ -1,0 +1,24 @@
+@import '../../helpers/theme_colors.module.scss';
+@import '../../helpers/templates.module.scss';
+
+.homepage {
+    @include basePageStructure;
+}
+
+@media(max-width: 980px) {
+    .homepage__title {
+        margin-left: 90px;
+        & p{
+            font-size: 8rem;
+        }
+    }
+}
+
+@media(max-width: 830px) {
+    .homepage__title {
+        margin-left: 10%;
+        & p{
+            font-size: 7rem;
+        }
+    }
+}

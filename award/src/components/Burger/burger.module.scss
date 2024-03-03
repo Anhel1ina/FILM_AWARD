@@ -1,0 +1,28 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.burger, .open_icon{
+    height: 80px;
+    aspect-ratio: 1/1;
+    background-color: $main-black;
+    border: none;
+    border-left: 1px solid $main-light;
+    border-right: 1px solid $main-light;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+
+    transition: all ease-in-out .3s;
+
+    &:hover{
+        background-color: $jet;
+    }
+}
+
+@media(max-width: 980px){
+    .burger, .open_icon{
+        margin: 0;
+    }
+}

@@ -1,0 +1,133 @@
+@import '../../helpers/theme_colors.module.scss';
+@import '../../helpers/templates.module.scss';
+
+.pages_button{
+    height: 72px;
+    width: 150px;
+    background: transparent;
+    color: $rich-black;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 10px 25px;
+        & svg{
+            width: 20px;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    @include mainButtonsWrapper;
+
+    &:hover:not(.disabled){
+        box-shadow: -3px 2px 29px -10px rgba(34, 60, 80, 0.2);
+    }
+}
+
+@media(max-width: 830px){
+    .pages_button{
+        display: none;
+    }
+}
+
+:global(.DARK) .pages_button{
+    color: $main-light;
+
+    & svg line{
+        stroke: $main-light;
+    }
+
+    &::before{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $main-light;
+        border-bottom: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &::after{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $main-light;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.disabled{
+    color: $disadled-color;
+    cursor: not-allowed;
+
+    & div {
+        & svg line{
+            stroke: $disadled-color;
+        }
+    }
+
+    &::before{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $disadled-color;
+        border-bottom: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &::after{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $disadled-color;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+:global(.DARK) .disabled{
+    color: $folly;
+
+    & svg line{
+        stroke: $folly;
+    }
+
+    &::before{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $folly;
+        border-bottom: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &::after{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $folly;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+    }
+}

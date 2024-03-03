@@ -1,0 +1,24 @@
+@import '../../helpers/templates.module.scss';
+@import '../../helpers/theme_colors.module.scss';
+
+.header_button{
+    @include menuItem;
+
+    color: $main-black;
+    letter-spacing: 0.2rem;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 18px;
+    border-radius: 17px;
+    border: 0;
+
+    margin-left: 20px;
+    background: linear-gradient(135deg, $folly 0%, rgb(255, 48, 64) 0.01%, $gradient-color 100%);
+    background-size: 100%;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    &:hover{
+        background-size: 200%;
+    }
+}

@@ -1,0 +1,28 @@
+.base_style{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-size: cover;
+  /* background-position: -2px; */
+  background-repeat: no-repeat;
+}
+
+.min_inner_style{
+  min-height: calc(100vh - 92px);
+  /* background-position-y: 80px; */
+}
+
+.modal_window_state{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.LIGHT{
+  background-image: url('./assets/images/backgrounds/base-background.png');
+}
+
+.DARK{
+  background-image: url('./assets/images/backgrounds/base-background_dark.png');
+}

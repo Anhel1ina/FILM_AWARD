@@ -1,0 +1,15 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.similar_movie{
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &:hover{
+        box-shadow: 5px 5px 16px 5px rgba(34, 60, 80, 0.2);
+    }
+}

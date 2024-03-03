@@ -1,0 +1,33 @@
+@import '../../helpers/templates.module.scss';
+@import '../../helpers/theme_colors.module.scss';
+
+.favorites_page{
+    @include basePageStructure;
+
+    &__title{
+        color: $main-black;
+    }
+}
+
+@media(max-width: 980px){
+    .favorites_page__title{
+        & p{
+            font-size: 8rem;
+        }
+    }
+}
+
+@media(max-width: 830px){
+    .favorites_page__title{
+        margin-left: 100px;
+        & p{
+            font-size: 7rem;
+        }
+    }
+}
+
+:global(.DARK) .favorites_page {
+    &__title {
+        color: $main-light;
+    }
+}

@@ -1,0 +1,106 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.sign_form{
+    width: 35%;
+    border: 0;
+    background-color: $disadled-color;
+    border-radius: 10px;
+    
+
+    box-sizing: border-box;
+    padding: 0 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0 auto;
+
+    & a{
+        width: 100%;
+    }
+}
+
+@media(max-width: 980px){
+    .sign_form{
+        width: 50%;
+    }
+}
+
+@media(max-width: 730px){
+    .sign_form{
+        width: 70%;
+    }
+}
+
+.sign_text{
+    margin-top: 24px;
+    & p{
+        font-family: 'Main';
+        font-size: 16px;
+        font-weight: 500;
+        color: $rich-black;
+        margin: 0;
+    }
+
+    & a{
+        text-decoration: none;
+        color: $folly;
+    }
+}
+
+
+// :global(.dark) .sign_text{
+//     & p{
+//         color: rgba(255, 255, 255, 1);
+//     }
+
+//     & a{
+//         color: $main-hover-color;
+//     }
+// }
+
+
+.forget_link{
+    text-align: left;
+    width: 100%;
+    margin: 16px 0 0;
+    font-family: 'Main';
+    font-size: 16px;
+    font-weight: 400;
+    color: $rich-black;
+    text-decoration: none;
+    
+    text-align: left;
+}
+
+.error_fields{
+    font-family: 'Main';
+    font-size: 16px;
+    font-weight: 400;
+    color: $folly;
+
+    margin: 10px 0 0;
+    align-self: flex-start;
+}
+
+.error_field_side{
+    grid-column: 2/3;
+}
+
+
+.reset_passwd_text{
+    margin: 0;
+    width: 100%;
+    margin: 40px 0 0;
+
+    font-family: 'MenuFont';
+    font-size: 16px;
+    font-weight: 400;
+    color: $rich-black;
+    cursor: default;
+
+    & span{
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,135 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.pages_numbers{
+    display: flex;
+
+    & span:not(:last-child){
+        margin-right: 15px;
+    }
+
+    & span{
+        box-sizing: border-box;
+        padding: 5px;
+        min-width: 29px;
+        position: relative;
+        text-align: center;
+        color: $rich-black;
+        cursor: pointer;
+
+        &::before{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $light-grey;
+            border-right: 0;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $light-grey;
+            border-left: 0;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    & span.active{
+        color: $folly;
+        &::before{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $folly;
+            border-right: 0;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $folly;
+            border-left: 0;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+:global(.DARK) .pages_numbers{
+    & span{
+        color: $main-light;
+
+        &::before{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $main-light;
+            border-right: 0;
+    
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        &::after{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $main-light;
+            border-left: 0;
+    
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    & span.active{
+        color: $folly;
+        &::before{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $folly;
+            border-right: 0;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            height: calc(100% - 2px);
+            width: 5px;
+            border: 1px solid $folly;
+            border-left: 0;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

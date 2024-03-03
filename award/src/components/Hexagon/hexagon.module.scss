@@ -1,0 +1,25 @@
+@import '../../helpers/theme_colors.module.scss';
+
+
+.hexagon {
+	width: 50px;
+	aspect-ratio: 1/1;
+	background: transparent;
+	position: absolute;
+    z-index: 3;
+
+    border: 1px solid $rich-black;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding: 0 7px;
+
+    & svg{
+        width: 10px;
+    }
+
+}

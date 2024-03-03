@@ -1,0 +1,37 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.box{
+    width: 100%;
+    position: relative;
+    cursor: default;
+    p {
+        font-family: 'MenuFont';
+        font-size: 16px;
+        font-weight: 600;
+        margin: 20px 0 8px 0;
+        color: $rich-black;
+    }
+    .input{
+        width: 100%;
+        height: 50px;
+        font-family: 'Main';
+        border-radius: 10px;
+        outline: none;
+        padding-left: 20px;
+        box-sizing: border-box;
+    
+        border: 2px solid transparent;
+        transition: all ease-in-out .2s;
+        cursor: default;
+    
+        &:focus{
+            border: 2px solid $jet;
+        }
+    }
+}
+
+input::placeholder{
+    font-family: 'Main';
+    font-size: 16px;
+    font-weight: 400;
+}

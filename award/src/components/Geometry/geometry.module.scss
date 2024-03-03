@@ -1,0 +1,32 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.triangle {
+    position: absolute;
+    top: 500px;
+    left: 1px;
+    z-index: 1;
+    &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-bottom: 100px solid $main-light;
+        border-right: 80px solid transparent;
+    }
+}
+
+.rectangular{
+    position: absolute;
+    z-index: 1;
+    &::before{
+        content: '';
+        display: block;
+        width: 60vw;
+        height: 500px;
+        background-color: $folly;
+        position: absolute;
+        top: 100px;
+        left: 1px;
+    }
+}

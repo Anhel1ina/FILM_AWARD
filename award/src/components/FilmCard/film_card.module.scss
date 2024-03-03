@@ -1,0 +1,216 @@
+@import '../../helpers/theme_colors.module.scss';
+@import '../../helpers/templates.module.scss';
+
+@keyframes show {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: .6;
+    }
+}
+
+@keyframes hide {
+    from {
+        width: 100%;
+        opacity: .6;
+    }
+
+    to {
+        width: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes card {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.film_card {
+    position: relative;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    animation: card .7s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    &::before {
+        content: '';
+        display: block;
+        z-index: 2;
+        width: 100%;
+        background-color: $folly;
+
+        position: absolute;
+        opacity: 0;
+        transition: all .7s ease-in-out;
+    }
+
+    &__title {
+        @include filmTitleBox;
+        font-family: 'Oswald';
+    }
+
+    &>img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: 90%;
+        transition: all .7s ease-in-out;
+    }
+
+    &:hover {
+        &>img {
+            object-position: 80%;
+        }
+    }
+}
+
+:global(.DARK) .film_card {
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+
+    &__title {
+        background-color: $main-black;
+
+        &::after {
+            background-color: $main-black;
+        }
+    }
+}
+
+.small_card {
+    height: 250px;
+
+    &::before {
+        content: '';
+        height: 250px;
+    }
+
+    &>img {
+        height: 250px;
+    }
+}
+
+.medium_card,
+.big_card {
+    height: 524px;
+
+    &::before {
+        content: '';
+        height: 524px;
+    }
+
+    &>img {
+        height: 524px;
+    }
+}
+
+.big_card .film_card__title {
+    &::after {
+        left: -12px;
+        transform: perspective(35px) rotateX(22deg);
+    }
+}
+
+
+.enter {
+    &::before {
+        animation: show .7s ease-in-out forwards;
+    }
+}
+
+.hide {
+    &::before {
+        animation: hide .7s ease-in-out forwards;
+    }
+}
+
+.card_buttons {
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+        & svg path {
+            fill: $main-light;
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .card_buttons{
+        padding: 0 8px;
+    }
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+
+    & svg {
+        margin-left: 5px;
+    }
+}
+
+
+@media(max-width: 980px) {
+    .small_card {
+        height: 200px;
+
+        &::before {
+            content: '';
+            height: 200px;
+        }
+
+        &>img {
+            height: 200px;
+        }
+    }
+
+    .medium_card,
+    .big_card {
+        height: 424px;
+
+        &::before {
+            content: '';
+            height: 424px;
+        }
+
+        &>img {
+            height: 424px;
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .film_card__title{
+        & span {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .film_card__title{
+        & span {
+            font-size: 16px;
+        }
+    }
+}

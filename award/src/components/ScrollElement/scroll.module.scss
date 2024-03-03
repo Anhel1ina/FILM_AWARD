@@ -1,0 +1,72 @@
+@import '../../helpers/theme_colors.module.scss';
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.scroll_elem {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .move_container{
+        animation: moveUpDown 2s infinite;
+    }
+
+    & svg {
+        width: 30px;
+        aspect-ratio: 1/1;
+        transform: rotate(90deg);
+    }
+
+    &__line_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & p{
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            font-size: 16px;
+            animation: moveUpDown 2s infinite;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .scroll_elem {
+        left: 3%;
+        & svg {
+            width: 20px;
+        }
+    
+        &__line_box{
+            & p{
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
+
+:global(.DARK) .scroll_elem{
+    color: $main-light;
+    & svg line{
+        stroke: $main-light;
+    }
+
+}

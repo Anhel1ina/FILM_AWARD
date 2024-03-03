@@ -1,0 +1,35 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.footer{
+    width: 100%;
+    height: 92px;
+    background-color: $main-black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 56px;
+
+    & img{
+        width: 40px;
+    }
+
+    & p{
+        font-family: 'MenuFont';
+        font-size: 16px;
+        font-weight: 400;
+        color: $main-light;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer{
+        & p{
+            font-size: 12px;
+        }
+    }
+    
+}

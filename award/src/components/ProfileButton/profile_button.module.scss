@@ -1,0 +1,42 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.profile_button{
+    border: none;
+    font-family: 'MenuFont';
+    font-size: 14px;
+    height: 40px;
+
+    box-sizing: border-box;
+    padding: 0 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.save{
+    background-color: $gradient-color;
+
+    &:hover{
+        background-color: $folly;
+    }
+}
+
+.logout{
+    background-color: transparent;
+    border: 3px solid $main-black;
+
+    &:hover{
+        background-color: $main-black;
+        color: $main-light;
+    }
+}
+
+:global(.DARK) .logout {
+    border-color: $main-light;
+    color: $main-light;
+
+    &:hover{
+        color: $main-black;
+        background-color: $main-light;
+    }
+}

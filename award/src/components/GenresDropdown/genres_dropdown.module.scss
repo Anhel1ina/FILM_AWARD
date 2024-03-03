@@ -1,0 +1,110 @@
+@import '../../helpers/theme_colors.module.scss';
+
+
+@keyframes open {
+    to{
+        transform: rotate(270deg);
+    }
+}
+
+
+.genres_dropdown {
+    width: 100%;
+    position: relative;
+
+    &__choose_filter{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__add_button{
+        height: 40px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 2px solid $folly;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+
+        &:hover{
+            background-color: $folly;
+        }
+    }
+
+    &__filters_holder{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        margin-top: 20px;
+        border-radius: 10px;
+
+        box-sizing: border-box;
+        padding: 15px;
+
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+:global(.DARK) .genres_dropdown__add_button {
+    color: $main-light;
+}
+
+.genres_button {
+    width: 85%;
+    position: relative;
+
+    & input {
+        width: 100%;
+        height: 40px;
+        border: 0;
+        outline: none;
+        padding: 10px 60px 10px 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    & svg {
+        transform: rotate(90deg);
+        width: 20px;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+.rotate_arrow{
+    & svg {
+        animation: open .5s ease-in-out forwards;
+    }
+}
+
+.genres__list{
+    width: 84%;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding: 0;
+    background-color: $main-light;
+
+    position: absolute;
+    top: 26px;
+    left: 1px;
+    z-index: 3;
+
+    & li {
+        list-style-type: none;
+        padding: 7px;
+        border: 0;
+        border-bottom: 1px solid $rich-black;
+        text-transform: capitalize;
+        transition: all .4s ease-in-out;
+
+        &:hover{
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import '../../helpers/templates.module.scss';
+@import '../../helpers/theme_colors.module.scss';
+
+@keyframes set_underline{
+    to{
+        width: 100%;
+    }
+}
+
+.menu_item{
+    @include menuItem;
+    
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    transition: all ease-in-out .2s;
+
+    & svg {
+        margin-right: 10px;
+
+        path{
+            fill: $main-light;
+        }
+    } 
+
+    &:hover{
+        background-color: $jet;
+    }
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    
+    & .underline{
+        background-color: $folly;
+        height: 5px;
+        width: 0px;
+
+        position: absolute;
+        bottom: -10px;
+        border-radius: 2px;
+    }
+
+    &:hover .underline {
+        animation: set_underline .2s ease-in-out 1 forwards;
+    }
+}
+
+.active{
+    .menu_item{
+        background-color: $jet;
+    }
+}
+
+.burger_menu_item{
+    border-bottom: 1px solid $main-black;
+    border-right: 1px solid $main-black;
+    height: 70px;
+    transition: all .2s ease-in-out;
+    
+    & svg path{
+        fill: $main-black;
+    }
+
+    & p {
+        color: $main-black;
+    }
+
+    &:hover{
+        background-color: $jet;
+        & svg path{
+            fill: $main-light;
+        }
+        & p{
+            color: $main-light;
+        }
+    }
+}
+
+:global(.DARK) .burger_menu_item {
+    border-bottom: 1px solid $main-light;
+    border-right: 1px solid $main-light;
+    & svg path{
+        fill: $main-light;
+    }
+
+    & p {
+        color: $main-light;
+    }
+
+    &:hover{
+        background-color: $folly;
+    }
+
+    & li:hover{
+        background-color: $folly;
+    }
+}
+
+.burger_active{
+    background-color: $jet;
+    & svg path{
+        fill: $main-light;
+    }
+
+    & p {
+        color: $main-light;
+    }
+}
+
+:global(.DARK) .burger_active {
+    background-color: $folly;
+}
+
+
+

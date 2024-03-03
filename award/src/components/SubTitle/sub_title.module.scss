@@ -1,0 +1,17 @@
+@import '../../helpers/templates.module.scss';
+@import '../../helpers/theme_colors.module.scss';
+
+.sub_title{
+    @include menuItem;
+    text-transform: capitalize;
+    color: $rich-black;
+    font-size: 16px;
+}
+
+:global(.DARK) .sub_title {
+    color: $main-light;
+}
+
+.main{
+    font-size: 24px;
+}

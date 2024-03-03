@@ -1,0 +1,10 @@
+@import '../../helpers/theme_colors.module.scss';
+@import '../../helpers/templates.module.scss';
+
+.main_title{
+    font-family: 'Tungsten';
+    letter-spacing: .02rem;
+    font-size: 9vw;
+    overflow: hidden;
+    cursor: default; 
+}

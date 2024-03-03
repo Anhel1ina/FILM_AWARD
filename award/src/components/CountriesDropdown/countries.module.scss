@@ -1,0 +1,76 @@
+@import '../../helpers/theme_colors.module.scss';
+
+@keyframes open {
+    to{
+        transform: rotate(270deg);
+    }
+}
+
+.countries_dropdown{
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+
+    &__choose_country{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.countries_button {
+    width: 100%;
+    position: relative;
+
+    & input {
+        width: 100%;
+        height: 40px;
+        border: 0;
+        outline: none;
+        padding: 10px 60px 10px 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    & svg {
+        transform: rotate(90deg);
+        width: 20px;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+.rotate_arrow{
+    & svg {
+        animation: open .5s ease-in-out forwards;
+    }
+}
+
+.countries__list{
+    width: 100%;
+    max-height: 84px;
+    overflow-y: scroll;
+    padding: 0;
+    background-color: $main-light;
+
+    position: absolute;
+    top: 26px;
+    left: 1px;
+    z-index: 3;
+
+    & li {
+        list-style-type: none;
+        padding: 7px;
+        border: 0;
+        border-bottom: 1px solid $rich-black;
+        text-transform: capitalize;
+        transition: all .4s ease-in-out;
+
+        &:hover{
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}

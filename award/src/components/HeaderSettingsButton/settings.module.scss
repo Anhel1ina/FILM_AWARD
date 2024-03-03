@@ -1,0 +1,27 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.settings{
+    height: 40px;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    border-radius: 50%;
+    border: 2px solid $gradient-color;
+    background: transparent;
+
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all .4s ease-in-out;
+
+    & > svg path{
+        fill: $main-light;
+    }
+
+    &:hover{
+        background-color: $gradient-color;
+    }
+}

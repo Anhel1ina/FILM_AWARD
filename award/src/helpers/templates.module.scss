@@ -1,0 +1,112 @@
+@import '../helpers/theme_colors.module.scss';
+
+@mixin menuItem{
+    font-family: 'MenuFont';
+    font-size: 12px;
+    letter-spacing: .08em;
+    list-style-type: none;
+    color: $main-light;
+}
+
+@mixin mainBlockSize{
+    display: flex;
+    margin: 0 auto;
+    width: 75%;
+}
+
+@mixin mainBlockSize830{
+    display: flex;
+    margin: 0 auto;
+    width: 85%;
+}
+
+@mixin filmTitleBox{
+    position: absolute;
+    bottom: 0;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+
+
+    color: $main-light;
+    font-family: 'Main';
+    font-size: 18px;
+
+    width: 70%;
+    background-color: $rich-black;
+
+        &::after{
+            content: '';
+
+            border-top: 1px solid $main-light;
+            z-index: 2;
+            display: block;
+            position: absolute;
+            top: -10px;
+            left: -13px;
+            background-color: $rich-black;
+            transform: perspective(15px) rotateX(22deg);
+            height: 10px;
+            width: 100%; 
+        }
+}
+
+@mixin mainButtonsWrapper{
+    &::before{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $light-grey;
+        border-bottom: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &::after{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $light-grey;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@keyframes showTitle{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 9vw
+    }
+}
+
+@mixin basePageStructure{
+    margin-top: 80px;
+    z-index: 4;
+
+    &__title{
+    position: relative;
+    margin-left: 150px;
+    color: $main-light;
+    box-sizing: border-box;
+    padding-top: 43px;
+    z-index: 3;
+        & > p{
+            position: absolute;
+            z-index: 3;
+            top: 13%;
+            left: 10%;
+            height: 9vw;
+            overflow: hidden;
+            animation: showTitle .7s ease-out;
+        }
+    }
+}

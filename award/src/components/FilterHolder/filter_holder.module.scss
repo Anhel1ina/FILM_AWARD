@@ -1,0 +1,27 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.filter_holder{
+    border: 1px solid $rich-black;
+    height: 25px;
+    display: flex;
+
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    cursor: default;
+
+    & svg{
+        width: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+
+        & line{
+            stroke: $rich-black;
+        }
+    }
+}

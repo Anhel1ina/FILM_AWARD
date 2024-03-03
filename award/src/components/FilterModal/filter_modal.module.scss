@@ -1,0 +1,168 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.filter_modal_wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+
+    position: fixed;
+    top: 0;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter_modal {
+    width: 30%;
+    height: 80%;
+    background-color: $main-light;
+    box-shadow: 2px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+:global(.DARK) .filter_modal {
+    background-color: $jet;
+}
+
+.filter_modal__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    & svg {
+        width: 20px;
+        cursor: pointer;
+
+        & line {
+            stroke: $rich-black;
+        }
+    }
+}
+
+:global(.DARK) .filter_modal__bar svg line {
+    stroke: $main-light;
+}
+
+.sort {
+    margin-bottom: 15px;
+    &_buttons{
+        display: flex;
+        margin-top: 15px;
+
+        & div {
+            width: 50%;
+            padding: 10px;
+            font-family: 'MenuFont';
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid $rich-black;
+            border-radius: 10px 0 0 10px;
+            transition: all .4s ease-in-out;
+        }
+
+        & div:nth-child(2){
+            border-radius: 0 10px 10px 0;
+            border-left: 0;
+        }
+
+        & div:hover{
+            background-color: $rich-black;
+            color: $main-light;
+        }
+    }
+}
+
+:global(.DARK) .sort {
+    &_buttons{
+        color: $main-light;
+        & div {
+            border: 1px solid $main-light;
+        }
+
+        & div:nth-child(2){
+            border-radius: 0 10px 10px 0;
+            border-left: 0;
+        }
+
+        & div:hover{
+            background-color: $folly;
+            color: $main-light;
+        }
+    }
+}
+
+.selected_sort{
+    background-color: $rich-black;
+    color: $main-light;
+}
+
+:global(.DARK) .selected_sort {
+    background-color: $folly;
+    color: $main-black;
+}
+
+.genres{
+    &__dropdown{
+        margin-top: 15px;
+    }
+}
+
+.years, .rating{
+    margin-top: 15px;
+    width: 100%;
+    &__input{
+        display: flex;
+        margin-top: 10px;
+        & input{
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        & input:first-child{
+            margin-right: 20px;
+        }
+    }
+}
+
+.countries{
+    margin-top: 15px;
+}
+
+.main_buttons{
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter_input{
+    height: 40px;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+@media(max-width: 980px){
+    .filter_modal{
+        width: 40%;
+    }
+}
+
+@media(max-width: 980px){
+    .filter_modal{
+        width: 60%;
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.time_block{
+    background-color: $jet;
+    box-sizing: border-box;
+    
+    color: $main-light;
+    padding: 5px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}

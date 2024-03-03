@@ -1,0 +1,18 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.filter_main_button{
+    height: 40px;
+    font-family: 'MenuFont';
+    border-radius: 10px;
+    border: 0;
+
+    box-sizing: border-box;
+    padding: 0 15px;
+
+    cursor: pointer;
+}
+
+.show_res{
+    background-color: $folly;
+    color: $main-light;
+}

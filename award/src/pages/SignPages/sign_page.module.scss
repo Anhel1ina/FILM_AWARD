@@ -1,0 +1,173 @@
+@import '../../helpers/theme_colors.module.scss';
+
+.sign_page_title,
+.sign_up_title,
+.reset_passwd,
+.sign_success_title,
+.confirmation_title,
+.new_passwd_title {
+    margin-top: 80px;
+
+    &>div {
+        position: absolute;
+        top: 8%;
+        left: 25%;
+    }
+}
+
+@media(max-width: 730px) {
+    .sign_page_title{
+        &>div {
+            left: 16%;
+            top: 11%;
+        }
+    }
+}
+
+@media(max-width: 980px) {
+    .sign_page_title,
+    .sign_up_title,
+    .reset_passwd,
+    .sign_success_title,
+    .confirmation_title,
+    .new_passwd_title {
+        & p{
+            font-size: 8rem;
+        }
+    }
+}
+
+@media(max-width: 730px) {
+    .sign_page_title,
+    .sign_up_title,
+    .reset_passwd,
+    .sign_success_title,
+    .confirmation_title,
+    .new_passwd_title {
+        & p{
+            font-size: 6rem;
+        }
+    }
+}
+
+@media(max-width: 730px) {
+    .reset_passwd {
+        & p{
+            font-size: 4rem;
+        }
+    }
+}
+
+
+
+:global(.DARK) {
+
+    .sign_page_title,
+    .sign_up_title,
+    .reset_passwd,
+    .sign_success_title,
+    .confirmation_title,
+    .new_passwd_title {
+        color: $main-light;
+    }
+}
+
+.sign_up_title {
+    &>div {
+        top: 0%;
+    }
+}
+
+@media(max-width: 730px) {
+    .sign_up_title {
+        &>div {
+            top: 5%;
+        }
+    }
+}
+
+.sign_success_title {
+    &>div {
+        top: 19%;
+    }
+}
+
+@media(max-width: 730px) {
+    .sign_success_title {
+        &>div {
+            top: 23%;
+            left: 16%;
+        }
+    }
+}
+
+.reset_passwd {
+    &>div {
+        top: 19%;
+        left: 22%;
+    }
+}
+
+
+@media(max-width: 730px) {
+    .reset_passwd  {
+        &>div {
+            top: 26%;
+            left: 9%;
+        }
+    }
+}
+
+.confirmation_title {
+    &>div {
+        top: 23%;
+    }
+}
+
+.new_passwd_title {
+    &>div {
+        top: 2%;
+    }
+}
+
+@media(max-width: 980px) {
+    .new_passwd_title div {
+        left: 20%;
+    }
+}
+
+@media(max-width: 730px) {
+    .new_passwd_title {
+        & p {
+            font-size: 4rem;
+        }
+        & div {
+            left: 12%;
+            top: 9%;
+        }        
+    }
+}
+
+.sign_page_form {
+    margin-top: 11rem;
+}
+
+.sign_up_page_form {
+    margin-top: 7rem;
+}
+
+.reset_passwd_form {
+    margin-top: 18rem;
+}
+
+.success_form {
+    margin-top: 18rem;
+}
+
+.confirmation_form {
+    margin-top: 20rem;
+}
+
+.new_passwd_form {
+    margin-top: 8rem;
+}

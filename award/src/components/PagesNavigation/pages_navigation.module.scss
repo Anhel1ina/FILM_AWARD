@@ -1,0 +1,15 @@
+@import '../../helpers/templates.module.scss';
+
+.pages_navigation{
+    @include mainBlockSize;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 830px) {
+    .pages_navigation{
+        justify-content: center;
+    }
+}

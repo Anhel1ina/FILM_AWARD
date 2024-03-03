@@ -1,0 +1,119 @@
+@import '../../helpers/theme_colors.module.scss';
+
+@keyframes showInput{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 300px;
+    }
+}
+
+@keyframes openForm{
+    from{
+        width: 50px;
+    }
+    to{
+        width: 340px;
+    }
+}
+
+@keyframes hideForm{
+    to{
+        width: 50px;
+    }
+}
+
+
+@keyframes showCross{
+    from{
+        display: none;
+        opacity: 0;
+    }
+    to{
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes hideCross{
+    to{
+        display: none;
+        opacity: 0;
+    }
+}
+
+.search_form_hidden{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: $jet;
+    border-radius: 17px;
+    height: 50px;
+    aspect-ratio: 1/1;
+}
+
+.search_form{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: $jet;
+    border-radius: 17px;
+    height: 50px;
+
+    & input{
+        height: 50px;
+        width: 300px;
+
+        box-sizing: border-box;
+        font-family: 'Oswald';
+        border: none;
+        background-color: transparent;
+        padding: 10px 20px 10px 15px;
+        outline: none;
+
+        color: $main-light;
+        font-size: 16px;
+        letter-spacing: .1rem;
+        animation: showInput .7s ease-in-out;
+    }
+}
+
+.open_form{
+    animation: openForm 1s ease-in-out;
+    width: 340px;
+}
+
+.hide_form{
+    animation: hideForm 1s ease-in-out;
+}
+
+.search_button{
+    height: 30px;
+    aspect-ratio: 1/1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.cross_button{
+    height: 20px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 20px;
+
+    cursor: pointer;
+    animation: showCross .9s ease-in-out;
+}
+
+.hide_cross_button{
+    animation: hideCross 1s ease-in-out;
+}
+
+.filter_button{
+    animation: showCross .9s ease-in-out;
+}
+
+.filter_hide_button{
+    animation: hideCross .9s ease-in-out .1s;
+}

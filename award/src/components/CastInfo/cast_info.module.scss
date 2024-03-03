@@ -1,0 +1,34 @@
+.cast{
+    display: flex;
+    width: calc(100% - 20px);
+
+    & span{
+        font-size: 16px;
+    }
+
+    & img{
+        border-radius: 10px;
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+}
+
+.cast__container{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+
+    &__item{
+        margin-right: 10px;
+        min-width: 33%;
+        height: fit-content;
+        text-align: center;
+    }
+}
+
+@media(max-width: 980px) {
+    .cast__container__item{
+        min-width: 60%;
+    }
+}

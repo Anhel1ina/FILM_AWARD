@@ -1,0 +1,87 @@
+@import '../../helpers/theme_colors.module.scss';
+@import '../../helpers/templates.module.scss';
+
+.search_page_title{
+    position: relative;
+    @include mainBlockSize;
+    color: $main-light;
+    box-sizing: border-box;
+    padding-top: 89px;
+    z-index: 3;
+    color: $main-black;
+        & > p{
+            padding-top: 10px;
+            animation: showTitle .7s ease-out;
+        }
+}
+
+@media(max-width: 980px){
+    .search_page_title{
+        padding-top: 100px;
+    }
+}
+
+@media(max-width: 730px){
+    .search_page_title{
+        padding-top: 160px;
+    }
+}
+
+:global(.DARK) .search_page_title{
+    color: $main-light;
+}
+
+.search_page_result_wrapper{
+    position: absolute;
+    width: 30%;
+    height: 7vw;
+    right: 12%;
+    top: 13%;
+
+    @include mainButtonsWrapper;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > span {
+        font-family: 'Main';
+        color: $rich-black;
+        font-size: 4vw;
+    }
+}
+
+@media(max-width: 730px){
+    .search_page_result_wrapper{
+        top: 18%;
+    }
+}
+
+
+:global(.DARK) .search_page_result_wrapper{
+
+    &::before{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $main-light;
+        border-bottom: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &::after{
+        content: '';
+        width: calc(100% - 2px);
+        height: 20px;
+        border: 1px solid $main-light;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+    }
+
+    & >span {
+        color: $main-light;
+    }
+}
